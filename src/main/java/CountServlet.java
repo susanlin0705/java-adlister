@@ -18,8 +18,16 @@ public class CountServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
+        String reset = req.getParameter("reset");
+        PrintWriter out= resp.getWriter();
+
+        if(reset!=null && reset.equalsIgnoreCase("true")) {
+            hitCount = 0;
+            out.println(reset);
+        }
+
         hitCount++;
-        PrintWriter out = resp.getWriter();
+
         String content = "<h1> You have hit <h1>" + hitCount + " times";
         out.println(content);
     }
