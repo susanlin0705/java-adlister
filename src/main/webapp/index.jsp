@@ -5,32 +5,29 @@
   Time: 09:17
   To change this template use File | Settings | File Templates.
 --%>
-<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
-<%--<html>--%>
-<%--<head>--%>
-<%--    <title>Title</title>--%>
-<%--</head>--%>
-<%--<body>--%>
-
-<%--</body>--%>
-<%--</html>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%!int counter = 0; %>
-<% counter += 1; %>
+<%--different library--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%!int counter =0;%>
+<%counter +=1;%>
 <html>
 <head>
-    <title>Title</title>
+    <%@include file="/partials/header.jsp"%>
 </head>
 <body>
 
-<h1>The current count is <%= counter %>.</h1>
 
-View the page source!
+    <h1>This is the first page</h1>
+    <h2>The current count is <%=counter%> .</h2>
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
 
-<%-- this is a JSP comment, you will *not* see this in the html --%>
 
-<!-- this is an HTML comment, you *will* see this in the html -->
+
+    <%@ include file="/partials/script.jsp" %>
 
 
 </body>
 </html>
+

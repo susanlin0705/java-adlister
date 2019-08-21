@@ -11,9 +11,9 @@ import java.io.PrintWriter;
 public class CountServlet extends HttpServlet {
     private int hitCount;
 
-    public void start(){
-        hitCount = 0;
-    }
+//    public void start(){
+//        hitCount = 0;
+//    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,7 +28,7 @@ public class CountServlet extends HttpServlet {
 
         hitCount++;
 
-        String content = "<h1> You have hit <h1>" + hitCount + " times";
+        String content = "<h1> You have hit " + hitCount + " times <h1>";
         out.println(content);
     }
 }
