@@ -10,12 +10,12 @@ import java.util.List;
 public class AdsServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Ads listOfAdds = DaoFactory.getAdsDao();
-        List<Ad> lists = listOfAdds.all();
+        Ads adsDao = DaoFactory.getAdsDao();
+        List<Ad> listOfAdds = adsDao.all();
 
-//        List<Ad> lists= DaoFactory.getAdsDao().all();
+//        List<Ad> lists= DaoFactory.getAdsDao().all(); Ads = interface
 
-        req.setAttribute("adslist",lists);
+        req.setAttribute("adslist",listOfAdds);
         req.getRequestDispatcher("/ads/index.jsp").forward(req,resp);
 
 
