@@ -65,7 +65,7 @@ public class MySQLAdsDao implements Ads{
 
         String insertQuery =
                 String.format("INSERT INTO ads(user_id, title, description) VALUES ('%d', '%s', '%s')",
-                ad.getUserId(), ad.getDescription(), ad.getTitle());
+                ad.getUserId(), ad.getTitle(), ad.getDescription());
 
         System.out.println(insertQuery);
 
