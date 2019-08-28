@@ -6,8 +6,10 @@ public class User {
     private String email;
     private String password;
 
+    // create a new user
     public User() {}
 
+    // get the info from database to java
     public User(long id, String username, String email, String password) {
         this.id = id;
         this.username = username;
